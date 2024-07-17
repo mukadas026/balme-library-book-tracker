@@ -21,6 +21,7 @@ export const setCookie = (req: Request, res: Response, user: UserSchema) => {
 	res.cookie("jwt", token, {
 		maxAge: maxAge * 1000,
 		httpOnly: true,
+		secure: true
 		// signed
 	})
 }
