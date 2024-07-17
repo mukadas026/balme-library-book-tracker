@@ -21,9 +21,9 @@ const app = express()
 
 app.use(cookieParser())
 const corsOptions : CorsOptions = {
-    origin: ["http://localhost:3000", "https://balme-library-book-tracker.netlify.app"],
-    // origin: "*",
-    // credentials: true, 
+    // origin: ["http://localhost:3000", "https://balme-library-book-tracker.netlify.app"],
+    origin: "*",
+    credentials: true, 
 }
 app.use(cors(corsOptions))
 app.use(bodyParser.json({limit: "1gb"}))
